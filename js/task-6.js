@@ -1,16 +1,17 @@
 let arr = []
 let input
+let total = 0
 while (true) {
     let input = prompt("Введите число");
 
 
-// console.log(arr)
 if (input === null) {
     break;
 }
-input = Number(input);
-const nan = Number.isNaN(input)
-if (nan) {
+    let nan = Number(input);
+    nan = Number.isNaN(nan)
+
+if (nan === true) {
     alert("Было введено не число, попробуйте еще раз")
     continue;
 }
@@ -20,5 +21,11 @@ arr.push(input)
 
 }
 
-// arr.push(input)
-console.log(arr)
+
+
+for (let element of arr) {
+    element = Number(element)
+    total += element
+}
+
+console.log(total)
