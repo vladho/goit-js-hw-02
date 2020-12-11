@@ -1,16 +1,16 @@
 const checkForSpam = function(message) {
     message = message.split(" ");
-    let boolon
+    let result
     for (let spam of message){
         spam = spam.toLowerCase()    
     if (spam.includes("spam") || spam.includes("sale")) {
-    boolon = "true"
+        result = "true"
     break
 }
 else
-boolon = "false"
+result = "false"
     }
-    console.log(boolon)
-    return boolon
+    console.log(result)
+    return result
     }
-checkForSpam('Get best sAle offers now!')
+checkForSpam('Get best wsAle offers now!')
